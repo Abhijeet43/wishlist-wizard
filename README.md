@@ -44,6 +44,10 @@ npm run dev
 
 ![Wishlist Wizard](src/assets/wishlist-wizard.png)
 
+### Create Wishlist
+
+![Create Wishlist](src/assets/create-wishlist.png)
+
 ## 🏗️ Project Structure
 
 ```
