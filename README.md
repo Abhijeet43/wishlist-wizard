@@ -26,7 +26,7 @@ Wishlist Wizard is a modern React application that helps users create and manage
 
 ```bash
 # Clone the repository
-git clone [GITHUB_REPO_URL]
+git clone https://github.com/Abhijeet43/wishlist-wizard.git
 
 # Navigate to the project directory
 cd wishlist-wizard
@@ -40,17 +40,9 @@ npm run dev
 
 ## 📸 Screenshots
 
-### Home Page
+### Wishlist Wizard
 
-[SCREENSHOT_HOME_PAGE]
-
-### Add New Item
-
-[SCREENSHOT_ADD_ITEM_PAGE]
-
-### Wishlist Items
-
-[SCREENSHOT_ITEMS_PAGE]
+![Wishlist Wizard](src/assets/wishlist-wizard.png)
 
 ## 🏗️ Project Structure
 
@@ -115,9 +107,9 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## 🔗 Links
 
-- [GitHub Repository][GITHUB_REPO_URL]
-- [Live Demo][LIVE_DEMO_URL]
+- [GitHub Repository](https://github.com/Abhijeet43/wishlist-wizard)
+- [Live Demo](https://wishlist-wizard.netlify.app/)
 
 ---
 
-Made with ❤️ by [YOUR_NAME]
+Made with ❤️ by Abhijeet;
