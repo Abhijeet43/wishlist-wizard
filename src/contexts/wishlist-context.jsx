@@ -1,9 +1,11 @@
-import { createContext, use, useState } from "react";
+import { createContext, use } from "react";
+import useLocalStorage from "../hooks/useLocalStorage";
 
 const WishListContext = createContext();
 
 export function WishListProvider({ children }) {
-  const [wishlistItems, setWishlistItems] = useState([]);
+  const [wishlistItems, setWishlistItems, clearStoredWishlist] =
+    useLocalStorage("wishlistItems", []);
 
   const addToWishList = (newItem) => {
     setWishlistItems((prevItems) => [newItem, ...prevItems]);
@@ -16,7 +18,7 @@ export function WishListProvider({ children }) {
   };
 
   const clearWishList = () => {
-    setWishlistItems([]);
+    clearStoredWishlist();
   };
 
   return (
