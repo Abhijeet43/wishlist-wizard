@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router";
 import ItemList from "../components/wishlist-items/wishlist-items";
 import { useWishList } from "../contexts/wishlist-context";
-import { getCategories } from "../components/utils/get-categories";
+import { getCategories } from "../utils/categories";
 
 function ItemsPage() {
   const { wishlistItems, clearWishList, updateFilter } = useWishList();

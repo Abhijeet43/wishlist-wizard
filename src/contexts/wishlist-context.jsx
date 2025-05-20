@@ -1,5 +1,6 @@
 import { createContext, use, useState } from "react";
 import useLocalStorage from "../hooks/useLocalStorage";
+import { existingItem } from "../utils/items";
 
 const WishListContext = createContext();
 
@@ -14,6 +15,11 @@ export function WishListProvider({ children }) {
   };
 
   const addToWishList = (newItem) => {
+    const itemExists = existingItem(wishlistItems, newItem);
+    if (itemExists) {
+      alert("Item already exists");
+      return;
+    }
     setWishlistItems((prevItems) => [newItem, ...prevItems]);
   };
 
