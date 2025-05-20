@@ -4,11 +4,14 @@ import { RouterProvider } from "react-router";
 import App from "./App.jsx";
 import router from "./routes/index.js";
 import "./index.css";
+import { WishListProvider } from "./contexts/wishlist-context.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <RouterProvider router={router}>
-      <App />
-    </RouterProvider>
+    <WishListProvider>
+      <RouterProvider router={router}>
+        <App />
+      </RouterProvider>
+    </WishListProvider>
   </StrictMode>
 );
