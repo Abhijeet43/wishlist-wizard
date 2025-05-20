@@ -1,4 +1,4 @@
-import { createContext, use } from "react";
+import { createContext, use, useState } from "react";
 import useLocalStorage from "../hooks/useLocalStorage";
 
 const WishListContext = createContext();
@@ -6,6 +6,12 @@ const WishListContext = createContext();
 export function WishListProvider({ children }) {
   const [wishlistItems, setWishlistItems, clearStoredWishlist] =
     useLocalStorage("wishlistItems", []);
+
+  const [filterType, setFilterType] = useState("");
+
+  const updateFilter = (type) => {
+    setFilterType(type);
+  };
 
   const addToWishList = (newItem) => {
     setWishlistItems((prevItems) => [newItem, ...prevItems]);
@@ -28,6 +34,8 @@ export function WishListProvider({ children }) {
         addToWishList,
         removeFromWishList,
         clearWishList,
+        filterType,
+        updateFilter,
       }}
     >
       {children}
