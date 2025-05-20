@@ -16,7 +16,10 @@ function ItemsPage() {
   };
 
   const emptyWishList = () => {
-    clearWishList();
+    if (confirm("Are you sure you want to empty your wishlist?")) {
+      clearWishList();
+    }
+    return;
   };
 
   const categories = getCategories(wishlistItems);
@@ -24,7 +27,7 @@ function ItemsPage() {
   return (
     <section className="m-3">
       <h2 className="my-5 font-bold text-3xl text-center">Wishlist Items </h2>
-      <div className="flex justify-end items-center gap-4 my-3">
+      <div className="flex sm:flex-row flex-col justify-end items-center gap-4 my-3">
         <div className="flex">
           <label className="mr-2 label" htmlFor="categories">
             Select Category:
