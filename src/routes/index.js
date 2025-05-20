@@ -8,7 +8,6 @@ const router = createBrowserRouter([
   {
     path: "/",
     Component: RootLayout,
-    errorElement: <ErrorPage />,
     children: [
       { index: true, Component: ItemsPage },
       { path: "create-wishlist", Component: WishListForm },
